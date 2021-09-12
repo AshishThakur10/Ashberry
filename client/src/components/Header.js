@@ -6,25 +6,29 @@ const Header = () => {
      <Nav>
       <Logo>
         <img src="/images/logo.svg" alt="AshBerry" />
-      </Logo>
-
-     
-        <>
+      </Logo> 
+      <>
           <NavMenu>
-            <a href="/home">
-              <img src="/images/home-icon.svg" alt="HOME" 
-              />
+            <In>
+          <div clasName="input-container">
+                
+                <input type="text" id="filter-jobs" name="filter-jobs" placeholder="Filter by title"/>
+                <i className="far fa-search"></i>
+                
 
-              <span>HOME</span>
+                
+            </div>
+            </In>
+           
+            <a>             
+            <span>HOME</span>
+              <i class="fas fa-home"></i>
             </a>
-            <a>
-              <img src="/images/search-icon.svg" alt="SEARCH" />
-              <span>SEARCH</span>
-            </a>
-            <a>
-              <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
+            <a>             
               <span>Add Friends</span>
+              <i class="fas fa-user-friends"></i>
             </a>
+            
             
           </NavMenu>
           <SignOut>
@@ -36,7 +40,7 @@ const Header = () => {
         </>
       )
     </Nav>
-
+  
   );
 };
 const body = styled.div`
@@ -45,7 +49,26 @@ const body = styled.div`
     font-weight: 400;
     color: rgba(0,0,0,.87);`
 ;
-
+const In = styled.div`
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  background-color: gray;
+    height: 60px;
+    border-radius: 30px;
+    border: 7px rgb(87, 82, 85);
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    
+    
+    
+   
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+`
+;
 
  const header =styled.div `
     height: 101px;
