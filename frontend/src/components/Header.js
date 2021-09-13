@@ -1,76 +1,98 @@
 import styled from "styled-components";
+import { AiOutlineSearch } from 'react-icons/ai';
+
 
 const Header = () => {
   return (
- 
-     <Nav>
+    <>
       <Logo>
-        <img src="/images/logo.svg" alt="AshBerry" />
-      </Logo> 
-      <>
-          <NavMenu>
-            <In>
-          <div clasName="input-container">
-                
-                <input type="text" id="filter-jobs" name="filter-jobs" placeholder="Filter by title"/>
-                <i className="far fa-search"></i>
-                
+        <img src="/images/logo.svg" alt="AshBerry"/>
+      </Logo>
+      
+        
+        
+          <Searchcontainer>
+          <IconButton>
+          <AiOutlineSearch size={22}/>
+            </IconButton>
+            <SearchInput/>
+          </Searchcontainer>
+          
+            {/* <En>
+            
+            <i className="far fa-search"></i>
+            <input type="text" id="filter-jobs" name="filter-jobs" placeholder="Filter by title" />
+            </En>
+             */}
+            
+            <Nav>
 
-                
-            </div>
-            </In>
-           
-            <a>             
+          <a>
             <span>HOME</span>
-              <i class="fas fa-home"></i>
-            </a>
-            <a>             
-              <span>Add Friends</span>
-              <i class="fas fa-user-friends"></i>
-            </a>
-            
-            
-          </NavMenu>
-          <SignOut>
-            
-            <DropDown>
-             
-            </DropDown>
-          </SignOut>
-        </>
+            <span>HOME</span>
+            <i class="fas fa-home"></i>
+          </a>
+          <a>
+            <span>Add Friends</span>
+            <i class="fas fa-user-friends"></i>
+          </a>
+          </Nav>
+
+</>
       )
-    </Nav>
+ 
+
   
-  );
 };
+
+const Searchcontainer = styled.div`
+position: relative;
+   height: 360px;
+   width:46px;
+   border-radius:0;
+   display:flex;
+   align-items:center;
+   background: #f2f2f2;
+   justify-content: space-between;
+   padding-left: 5px;
+   transition: all 0.3s ease;
+
+`;
+const SearchInput = styled.div`
+padding-left: 48px;
+border:none;
+position: absolute;
+top:0;
+left:0;
+height: 100%;
+width: 100%;
+background-color: transparent;
+outline: none;
+font-size: 16px;
+border:1px solid transparent
+`;
+
+
 const body = styled.div`
     margin: 0;
     font-family: Helvetica,Arial, sans-serif;
     font-weight: 400;
     color: rgba(0,0,0,.87);`
-;
-const In = styled.div`
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  background-color: gray;
-    height: 60px;
-    border-radius: 30px;
-    border: 7px rgb(87, 82, 85);
-    display: flex;
-    cursor: pointer;
-    overflow: hidden;
-    
-    
-    
-   
-    font-size: 30px;
-    color: white;
-    margin-left: 20px;
-`
-;
+  ;
 
- const header =styled.div `
+const IconButton = styled.button`
+   position: relative;
+   height: 36px;
+   width:36px;
+   border:none;
+   z-index:1;
+   cursor: pointer;
+   background: none;
+
+ 
+`;
+
+const header = styled.div`
     height: 101px;
     width: 245px;
 
@@ -115,6 +137,7 @@ const Logo = styled.a`
 `;
 
 const NavMenu = styled.div`
+ 
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
@@ -125,6 +148,7 @@ const NavMenu = styled.div`
   position: relative;
   margin-right: auto;
   margin-left: 25px;
+  
 
   a {
     display: flex;
