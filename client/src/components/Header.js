@@ -5,11 +5,6 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <Nav>
-
-
-
-
-
       <Logo
         src="/images/logo.svg" />
      
@@ -35,7 +30,7 @@ const Header = () => {
           <e class="fas fa-ellipsis-h"></e>
           
         </a>
-        <hr/>
+        
       </NavMenu>
       
       
