@@ -18,15 +18,11 @@ const Header = () => {
           <i class="far fa-search"></i>
           </Searchbar>
           <r class="fas fa-home"></r>
-          
-
-
-          <j class="fas fa-user-friends"></j> 
+          <j class="fas fa-users"></j>
           <b class="fas fa-bell"></b>
           <d class="fas fa-ad"></d>
           <f class="fas fa-user-friends"></f>
-          <u class="fas fa-user"></u>
-         
+          <u class="fas fa-user"></u>         
           <e class="fas fa-ellipsis-h"></e>
           
         </a>
@@ -46,15 +42,8 @@ display:flax;
 align-items:center;
 padding:0 36px;
   
-
-hr{
- 
-}
-  
       `;
-     
-
-
+    
       const Searchbar = styled.nav`
       background-color: #b9adad;
       height: 30px;
@@ -62,6 +51,7 @@ hr{
       border: 2px rgb(87, 82, 85);
       display: flex;
       margin-top: 15px;
+      margin-left: 1.4%;
       overflow: hidden;
   }
   
@@ -154,7 +144,7 @@ padding-top: 10px;
 
 
 
-      `
+      `;
 
 
 export default Header;
