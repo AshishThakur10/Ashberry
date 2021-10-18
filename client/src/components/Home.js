@@ -4,8 +4,10 @@ import styled from "styled-components";
 const Home = () => {
 // eslint-disable-next-line
   return (
+    <>
+    
     <Container>
-      <hr/>
+    
       <l class="fas fa-user-circle"></l>
       <v>
         <i class="fas fa-plus-square"></i>      
@@ -40,7 +42,7 @@ const Home = () => {
       <p class="fas fa-user-circle"></p>
       </a>
     </Container>
-
+</>
   );
   
 
@@ -61,7 +63,7 @@ v{
   position: absolute;
   left: 15%;
  
-  top: 11%;
+  top: 10%;
 
   h2{
    display:flex;
@@ -69,7 +71,7 @@ v{
    padding-bottom:341px
   }
   h4{
-    margin-left:44%
+    margin-left:42%
   }
  
   p{
@@ -111,7 +113,7 @@ a{
   position: absolute;
   left: 85%;
  
-  top: 11%;
+  top: 10%;
 
  
 p{
