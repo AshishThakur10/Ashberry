@@ -10,6 +10,8 @@ import Bell from "./components/Bell";
 import Ad from "./components/Ad"
 import Groups from "./components/Groups";
 import More from "./components/More";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path='/bell' component={Bell}/>
           <Route path='/groups' component={Groups}/>
           <Route path='/more' component={More}/>
+          <Route path='/signin' component={Signin}/>
+          <Route path='/signup' component={Signup}/>
         </Switch>
         </BrowserRouter>
 

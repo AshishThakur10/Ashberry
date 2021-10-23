@@ -6,21 +6,27 @@ import {Link} from "react-router-dom"
 const Header = () => {
   return (
     <>
+ 
     <Nav>
-      <Logo
-        src="/images/logo.svg" />
+    
+      <Logo src="/images/logo.svg" />
+      
+      
+        
      
 
       <NavMenu>
+     
         <a>
-          
+       
         
           <Searchbar>
           <input type="text" id="filter-jobs" name="filter-jobs" placeholder="search" />
           <i class="far fa-search"></i>
           </Searchbar>
+          <div className='navbar'>
           <r><Link to="/"  class="fas fa-home"></Link></r>
-         
+          <s><Link to="/signin" class="fas fa-sign-in-alt"></Link></s>
           <j><Link to="/groups" class="fas fa-users"></Link></j>
           <b><Link to="/bell" class="fas fa-bell"></Link></b>
           <d><Link to="/ad" class="fas fa-ad" ></Link></d>
@@ -28,24 +34,29 @@ const Header = () => {
           <u><Link to="/profile" class="fas fa-user" ></Link></u>         
           <e><Link to="/more" class="fas fa-ellipsis-h"></Link></e>
           
-     
+          </div>
+          
+          
         </a>
    
         
       </NavMenu>
       
-     
+      
     </Nav>
-   <hr/>
-</>
+    <hr/>
+    </>
+
   );
 };
 
 const Nav = styled.nav`
+
 height:54px;
 display:flax;
 align-items:center;
 padding:0 36px;
+
 
   
       `;
@@ -63,9 +74,14 @@ padding:0 36px;
   
       `;
 const NavMenu = styled.div`     
+    .navbar{
+      
       display:flex;
+     
+    }
       
 
+     
       
 
     a{
@@ -97,7 +113,14 @@ const NavMenu = styled.div`
       font-size:30px;
       cursor: pointer;
       padding-top:14px;
-      margin-left:100px;
+      margin-left:10px;
+    }
+    
+    s{
+      font-size:30px;
+      cursor: pointer;
+      padding-top:14px;
+      margin-left:10px;
     }
     j{
       font-size: 30px;
