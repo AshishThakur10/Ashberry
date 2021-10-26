@@ -31,7 +31,7 @@ const Home = () => {
         
       </v>
       
-      <a>
+      <a href="/#">
       <i class="fas fa-user-friends"></i>
       <hr width = "124%"  />
       <p class="fas fa-user-circle"></p>

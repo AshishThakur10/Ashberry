@@ -10,28 +10,21 @@ const Header = () => {
     <Nav>
     
       <Logo src="/images/logo.svg" />
-      
-      
-        
-     
-
       <NavMenu>
-     
-        <a>
-       
-        
+        <a href="/#">              
           <Searchbar>
           <input type="text" id="filter-jobs" name="filter-jobs" placeholder="search" />
           <i class="far fa-search"></i>
           </Searchbar>
           <div className='navbar'>
           <r><Link to="/"  class="fas fa-home"></Link></r>
-          <s><Link to="/signin" class="fas fa-sign-in-alt"></Link></s>
+          <s><Link to="/login" class="fas fa-sign-in-alt"></Link></s>
           <j><Link to="/groups" class="fas fa-users"></Link></j>
           <b><Link to="/bell" class="fas fa-bell"></Link></b>
           <d><Link to="/ad" class="fas fa-ad" ></Link></d>
           <f><Link to="/friends"class="fas fa-user-friends"></Link></f>
           <u><Link to="/profile" class="fas fa-user" ></Link></u>         
+         
           <e><Link to="/more" class="fas fa-ellipsis-h"></Link></e>
           
           </div>
