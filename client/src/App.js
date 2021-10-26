@@ -9,13 +9,15 @@ import Friends from "./components/Friends";
 import Bell from "./components/Bell";
 import Ad from "./components/Ad"
 import Groups from "./components/Groups";
-import More from "./components/More";
-import Signin from "./components/Signin";
+import More from "./components/More"
 import Signup from "./components/Signup";
+import NoteState from "./context/NoteState";
+import Login from "./components/Login";
 
 function App() {
   return (
     <>
+    <NoteState>
     <BrowserRouter>
     <Header/>
        <Switch>
@@ -26,10 +28,11 @@ function App() {
           <Route path='/bell' component={Bell}/>
           <Route path='/groups' component={Groups}/>
           <Route path='/more' component={More}/>
-          <Route path='/signin' component={Signin}/>
+          <Route path='/login' component={Login}/>
           <Route path='/signup' component={Signup}/>
         </Switch>
         </BrowserRouter>
+        </NoteState>
 
       {/* <Home Home={Home} />
       <Profile Profile={Profile} /> */}
