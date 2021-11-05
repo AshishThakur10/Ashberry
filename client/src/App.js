@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
     <Header/>
        <Switch>
-          <Route path='/' component={Home} exact/>
+          <Route path='/' component={Signup} exact/>
           <Route path='/profile' component={Profile}/>         
           <Route path='/friends' component={Friends}/>
           <Route path='/ad' component={Ad}/>          
@@ -30,6 +30,7 @@ function App() {
           <Route path='/more' component={More}/>
           <Route path='/login' component={Login}/>
           <Route path='/signup' component={Signup}/>
+          <Route path='/home' component={Home} exact/>
         </Switch>
         </BrowserRouter>
         </NoteState>
