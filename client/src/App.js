@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
     <Header/>
        <Switch>
-          <Route path='/' component={Signup} exact/>
+          <Route path='/' component={Home} exact/>
           <Route path='/profile' component={Profile}/>         
           <Route path='/friends' component={Friends}/>
           <Route path='/ad' component={Ad}/>          
