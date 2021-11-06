@@ -106,16 +106,6 @@
 
 // export default Signup;
 
-
-
-
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styled from 'styled-components'
