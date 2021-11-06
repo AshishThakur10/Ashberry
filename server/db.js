@@ -7,8 +7,6 @@ const mongoAT1 = "mongodb+srv://aman:Kumar@321@cluster0.veuzb.mongodb.net/myFirs
 const connectToMongo = ()=>{
     mongoose.connect(mongoAt,{
         dbName: 'Ashberry',
-        userNewUrlParse : true,
-        useUnifiedTopology: true
     }).then(()=> {
         console.log("connnected to MongoDB Successfully")
     });
