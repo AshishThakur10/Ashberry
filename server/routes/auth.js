@@ -1,11 +1,47 @@
-const express = require("express");
-const router = express.Router();
 const User = require("../models/User");
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
 var fetchuser = require('../middleware/fetchuser');
 const JWT_SECRET = "Harryisagoodb$oy";
+const router = require("express").Router();
+
+//AUTH start 
+
+// REGISTER 
+router.post("/register",async (req,res)=>{
+  const newUser = new User({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password
+  });
+  try{
+    const savedUser = await newUser.save()
+    res.status(201).send(savedUser)
+    console.log(savedUser)
+  }catch(err){
+    res.status(500).send(err)
+    console.log(err)
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //ROUTE 1: crate a user using :POST "/api/auth".Doesnt require Auth
 router.post(
