@@ -5,6 +5,7 @@ var jwt = require("jsonwebtoken");
 var fetchuser = require('../middleware/fetchuser');
 const JWT_SECRET = "Harryisagoodb$oy";
 const router = require("express").Router();
+const CryptoJS = require('crypto-js');
 
 //AUTH start 
 
@@ -13,7 +14,7 @@ router.post("/register",async (req,res)=>{
   const newUser = new User({
     username: req.body.username,
     email: req.body.email,
-    password: req.body.password
+    password: CryptoJS.AES.encrypt(req.body.password,"Secreat Passpharese").toString()
   });
   try{
     const savedUser = await newUser.save()
