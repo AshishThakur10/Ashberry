@@ -26,6 +26,20 @@ router.post("/register",async (req,res)=>{
   }
 })
 
+// LOGIN
+router.post("/lo", async(req,res)=>{
+  try {
+    const user = await User.findOne({ username: req.body.username });
+    !user && res.status(401).json("wrong credential")
+
+    const hashedPassword = CryptoJS.AES.decrypt(user.password,"Secreat Passpharese");
+    const password = hashedPassword.toString(CryptoJS.enc.Utf8);
+    password != req.body.password && res.status(401).json("wrong password")
+  }catch(err){
+    res.status(500).json(err)
+  }
+})
+
 
 
 
@@ -96,7 +110,7 @@ router.post(
 
 // ROUTE 2 :Authenticate a  user using:"/api/auth/login".no login required
 router.post(
-  "/login",
+  "/login1",
   [
     body("email", "Enter a valid email").isEmail(),
     body("password", "password can not be blanked").exists(),
